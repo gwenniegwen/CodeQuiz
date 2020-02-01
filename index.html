@@ -1,27 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/15868ef2e3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>Pop Quiz</title>
+  <script src="https://kit.fontawesome.com/15868ef2e3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Pop Quiz</title>
 </head>
 
 
 <body>
-    <h1>Pop Quiz!!</h1>
-    <hr style = "margin-top: 20px;">
-<div class="container">
-    <h2> Question:</h2>
+  <h1>Pop Quiz!!</h1>
+
+  <hr style="margin-top: 20px;">
+
+  <div class="container">
+    
+    <div class="start" id="startIt">
+
+      <h3>Are You Ready?</h3>
+      <p>Instructions: There are 10 questions containing popluar
+        90's movie quotes. Your job is simple. Correctly identify the title of the
+        movie that the quote can be found in.  Good Luck!!
+      </p>
+      <h3>Click the "I'm Ready" Button To Accept The Challenge</h3>
+      <button type="button" class="btn" onclick="ready()">Im Ready</button>
+    </div>
+
+    <div class="question-number hide" id="questionIt">
+      <h3>Question <span class="question-num-value">1</span> of <span class="total-question"></span></h3>
+      <div class="question">
+      </div>
+
+      <div class="answers">
+        <div id="0" class="answer1" onclick="check(this)"></div>
+        <div id="1" class="answer2" onclick="check(this)"></div>
+        <div id="2" class="answer3" onclick="check(this)"></div>
+        <div id="3" class="answer4" onclick="check(this)"></div>
+      </div>
+    </div>
+
+
+    <div class="timer" id="timeIt">
+      <h5>Timer:</h5>
+       </div>
+     
 
     <hr style="margin-bottom: 50px;">
 
+    
 
 
-</div>
+    <div class="score hide" id="scoreIt">
+      <h3>Congrats You Finished the Quiz Your Score is </h3>
+    <img src="final.jpg" alt="urkel">
+    </div>
+
+
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
+
 </html>
+
+<!-- For Loop
+x = question.[i] 
+
+for Loop
+y = question.[i] answer.[j]-->
